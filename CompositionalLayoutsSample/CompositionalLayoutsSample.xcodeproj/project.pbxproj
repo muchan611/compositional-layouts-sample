@@ -10,6 +10,9 @@
 		900FDAAB26FDC1E0005A3678 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FDAAA26FDC1E0005A3678 /* UICollectionView+Extension.swift */; };
 		900FDAAE26FDD084005A3678 /* CustomGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FDAAD26FDD084005A3678 /* CustomGroupViewController.swift */; };
 		900FDAB026FDD0A7005A3678 /* CustomGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FDAAF26FDD0A7005A3678 /* CustomGroupCollectionViewCell.swift */; };
+		900FDAB326FE11BC005A3678 /* CarouselWithPageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FDAB226FE11BC005A3678 /* CarouselWithPageControlViewController.swift */; };
+		900FDAB526FE1225005A3678 /* CarouselWithPageControlCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FDAB426FE1225005A3678 /* CarouselWithPageControlCollectionViewCell.swift */; };
+		900FDAB726FE28BA005A3678 /* CarouselWithPageFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FDAB626FE28BA005A3678 /* CarouselWithPageFooterView.swift */; };
 		90E1155C26F8AC2C009AB02C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1155B26F8AC2C009AB02C /* AppDelegate.swift */; };
 		90E1155E26F8AC2C009AB02C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1155D26F8AC2C009AB02C /* SceneDelegate.swift */; };
 		90E1156026F8AC2C009AB02C /* SampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1155F26F8AC2C009AB02C /* SampleListViewController.swift */; };
@@ -47,6 +50,9 @@
 		900FDAAA26FDC1E0005A3678 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		900FDAAD26FDD084005A3678 /* CustomGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGroupViewController.swift; sourceTree = "<group>"; };
 		900FDAAF26FDD0A7005A3678 /* CustomGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		900FDAB226FE11BC005A3678 /* CarouselWithPageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselWithPageControlViewController.swift; sourceTree = "<group>"; };
+		900FDAB426FE1225005A3678 /* CarouselWithPageControlCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselWithPageControlCollectionViewCell.swift; sourceTree = "<group>"; };
+		900FDAB626FE28BA005A3678 /* CarouselWithPageFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselWithPageFooterView.swift; sourceTree = "<group>"; };
 		90E1155826F8AC2B009AB02C /* CompositionalLayoutsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositionalLayoutsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E1155B26F8AC2C009AB02C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E1155D26F8AC2C009AB02C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +117,16 @@
 			path = CustomGroup;
 			sourceTree = "<group>";
 		};
+		900FDAB126FE1128005A3678 /* CarouselWithPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				900FDAB226FE11BC005A3678 /* CarouselWithPageControlViewController.swift */,
+				900FDAB426FE1225005A3678 /* CarouselWithPageControlCollectionViewCell.swift */,
+				900FDAB626FE28BA005A3678 /* CarouselWithPageFooterView.swift */,
+			);
+			path = CarouselWithPageControl;
+			sourceTree = "<group>";
+		};
 		90E1154F26F8AC2B009AB02C = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +157,7 @@
 				90E1158D26FD93D0009AB02C /* StandardLayouts */,
 				90E1159726FDA6C3009AB02C /* CarouselWithHeader */,
 				900FDAAC26FDD037005A3678 /* CustomGroup */,
+				900FDAB126FE1128005A3678 /* CarouselWithPageControl */,
 				90E1156426F8AC2C009AB02C /* Assets.xcassets */,
 				90E1156626F8AC2C009AB02C /* LaunchScreen.storyboard */,
 				90E1156926F8AC2C009AB02C /* Info.plist */,
@@ -319,9 +336,12 @@
 				90E1159B26FDB0F4009AB02C /* CarouselWithHeaderCollectionViewCell.swift in Sources */,
 				900FDAAE26FDD084005A3678 /* CustomGroupViewController.swift in Sources */,
 				900FDAAB26FDC1E0005A3678 /* UICollectionView+Extension.swift in Sources */,
+				900FDAB326FE11BC005A3678 /* CarouselWithPageControlViewController.swift in Sources */,
 				90E1156026F8AC2C009AB02C /* SampleListViewController.swift in Sources */,
+				900FDAB526FE1225005A3678 /* CarouselWithPageControlCollectionViewCell.swift in Sources */,
 				90E1158F26FD9872009AB02C /* StandardLayoutsSectionHeaderView.swift in Sources */,
 				90E1155C26F8AC2C009AB02C /* AppDelegate.swift in Sources */,
+				900FDAB726FE28BA005A3678 /* CarouselWithPageFooterView.swift in Sources */,
 				90E1159926FDA6F1009AB02C /* CarouselWithHeaderListViewController.swift in Sources */,
 				90E1158C26FD9382009AB02C /* StandardLayoutsViewController.swift in Sources */,
 				90E1159326FD98BF009AB02C /* StandardLayoutsCollectionViewCell.swift in Sources */,

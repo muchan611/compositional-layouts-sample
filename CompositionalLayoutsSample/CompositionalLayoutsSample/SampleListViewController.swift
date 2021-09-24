@@ -13,6 +13,7 @@ class SampleListViewController: UIViewController {
         case standard
         case carouselWithHeader
         case customGroup
+        case carouselWithPageControl
     }
     private let tableView = UITableView(frame: .zero)
     
@@ -25,10 +26,12 @@ class SampleListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
 }
@@ -46,6 +49,10 @@ extension SampleListViewController: UITableViewDelegate {
             navigationController?.pushViewController(viewController, animated: true)
         case .customGroup:
             let viewController = CustomGroupViewController()
+            viewController.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(viewController, animated: true)
+        case .carouselWithPageControl:
+            let viewController = CarouselWithPageControlViewController()
             viewController.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(viewController, animated: true)
         }
@@ -75,6 +82,8 @@ extension SampleListViewController: UITableViewDataSource {
             cell.textLabel?.text = "CarouselWithHeaderListViewController"
         case .customGroup:
             cell.textLabel?.text = "CustomGroupViewController"
+        case .carouselWithPageControl:
+            cell.textLabel?.text = "CarouselWithPageControlViewController"
         }
         return cell
     }
