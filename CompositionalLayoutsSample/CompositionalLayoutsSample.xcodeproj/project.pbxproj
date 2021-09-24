@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		900FDAAB26FDC1E0005A3678 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FDAAA26FDC1E0005A3678 /* UICollectionView+Extension.swift */; };
 		90E1155C26F8AC2C009AB02C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1155B26F8AC2C009AB02C /* AppDelegate.swift */; };
 		90E1155E26F8AC2C009AB02C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1155D26F8AC2C009AB02C /* SceneDelegate.swift */; };
 		90E1156026F8AC2C009AB02C /* SampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1155F26F8AC2C009AB02C /* SampleListViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		900FDAAA26FDC1E0005A3678 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		90E1155826F8AC2B009AB02C /* CompositionalLayoutsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositionalLayoutsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E1155B26F8AC2C009AB02C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E1155D26F8AC2C009AB02C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		900FDAA926FDC1C0005A3678 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				900FDAAA26FDC1E0005A3678 /* UICollectionView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		90E1154F26F8AC2B009AB02C = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		90E1155A26F8AC2B009AB02C /* CompositionalLayoutsSample */ = {
 			isa = PBXGroup;
 			children = (
+				900FDAA926FDC1C0005A3678 /* Extension */,
 				90E1155B26F8AC2C009AB02C /* AppDelegate.swift */,
 				90E1155D26F8AC2C009AB02C /* SceneDelegate.swift */,
 				90E1155F26F8AC2C009AB02C /* SampleListViewController.swift */,
@@ -292,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E1159B26FDB0F4009AB02C /* CarouselWithHeaderCollectionViewCell.swift in Sources */,
+				900FDAAB26FDC1E0005A3678 /* UICollectionView+Extension.swift in Sources */,
 				90E1156026F8AC2C009AB02C /* SampleListViewController.swift in Sources */,
 				90E1158F26FD9872009AB02C /* StandardLayoutsSectionHeaderView.swift in Sources */,
 				90E1155C26F8AC2C009AB02C /* AppDelegate.swift in Sources */,

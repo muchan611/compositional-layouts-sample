@@ -34,8 +34,8 @@ class StandardLayoutsViewController: UIViewController {
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        collectionView.register(StandardLayoutsCollectionViewCell.self, forCellWithReuseIdentifier: "StandardLayoutsCollectionViewCell")
-        collectionView.register(StandardLayoutsSectionHeaderView.self, forSupplementaryViewOfKind: StandardLayoutsSectionHeaderView.elementKind, withReuseIdentifier: "StandardLayoutsSectionHeaderView")
+        collectionView.register(cellType: StandardLayoutsCollectionViewCell.self)
+        collectionView.register(type: StandardLayoutsSectionHeaderView.self, kind: StandardLayoutsSectionHeaderView.elementKind)
         
         configureDataSource()
     }
@@ -115,9 +115,7 @@ class StandardLayoutsViewController: UIViewController {
     private func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StandardLayoutsCollectionViewCell", for: indexPath) as? StandardLayoutsCollectionViewCell else {
-                fatalError("Could not dequeue a cell.")
-            }
+            let cell = collectionView.dequeueReusableCell(with: StandardLayoutsCollectionViewCell.self, for: indexPath)
             cell.configure(with: identifier)
             return cell
         }
@@ -125,9 +123,7 @@ class StandardLayoutsViewController: UIViewController {
         dataSource.supplementaryViewProvider = { (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
             if kind == StandardLayoutsSectionHeaderView.elementKind {
                 let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
-                guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StandardLayoutsSectionHeaderView.elementKind, withReuseIdentifier: "StandardLayoutsSectionHeaderView", for: indexPath) as? StandardLayoutsSectionHeaderView else {
-                    fatalError("Could not dequeue a view.")
-                }
+                let header = collectionView.dequeueReusableSupplementaryView(ofKind: StandardLayoutsSectionHeaderView.elementKind, with: StandardLayoutsSectionHeaderView.self, for: indexPath)
                 header.configure(title: section.rawValue)
                 return header
             } else {

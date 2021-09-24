@@ -33,8 +33,8 @@ class CarouselWithHeaderListViewController: UIViewController {
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
-        collectionView.register(CarouselWithHeaderCollectionViewCell.self, forCellWithReuseIdentifier: "CarouselWithHeaderCollectionViewCell")
-        collectionView.register(CarouselWithHeaderSectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CarouselWithHeaderSectionHeaderView")
+        collectionView.register(cellType: CarouselWithHeaderCollectionViewCell.self)
+        collectionView.register(type: CarouselWithHeaderSectionHeaderView.self, kind: UICollectionView.elementKindSectionHeader)
         
         configureDataSource()
     }
@@ -65,19 +65,15 @@ class CarouselWithHeaderListViewController: UIViewController {
     private func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, identifier: Item) -> UICollectionViewCell? in
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarouselWithHeaderCollectionViewCell", for: indexPath) as? CarouselWithHeaderCollectionViewCell else {
-                fatalError("Could not dequeue a cell.")
-            }
+            let cell = collectionView.dequeueReusableCell(with: CarouselWithHeaderCollectionViewCell.self, for: indexPath)
             cell.configure(with: identifier)
             return cell
         }
         
         dataSource.supplementaryViewProvider = { (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
             if kind == UICollectionView.elementKindSectionHeader {
+                let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, with: CarouselWithHeaderSectionHeaderView.self, for: indexPath)
                 let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
-                guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CarouselWithHeaderSectionHeaderView", for: indexPath) as? CarouselWithHeaderSectionHeaderView else {
-                    fatalError("Could not dequeue a view.")
-                }
                 if case .carouselWithHeader(sectionIndex: let sectionIndex) = section {
                     header.configure(title: "Section: \(sectionIndex)", subTitle: "サブタイトル")
                 }
