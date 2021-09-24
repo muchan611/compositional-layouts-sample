@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		900FDAAB26FDC1E0005A3678 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FDAAA26FDC1E0005A3678 /* UICollectionView+Extension.swift */; };
+		900FDAAE26FDD084005A3678 /* CustomGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FDAAD26FDD084005A3678 /* CustomGroupViewController.swift */; };
+		900FDAB026FDD0A7005A3678 /* CustomGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900FDAAF26FDD0A7005A3678 /* CustomGroupCollectionViewCell.swift */; };
 		90E1155C26F8AC2C009AB02C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1155B26F8AC2C009AB02C /* AppDelegate.swift */; };
 		90E1155E26F8AC2C009AB02C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1155D26F8AC2C009AB02C /* SceneDelegate.swift */; };
 		90E1156026F8AC2C009AB02C /* SampleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1155F26F8AC2C009AB02C /* SampleListViewController.swift */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		900FDAAA26FDC1E0005A3678 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		900FDAAD26FDD084005A3678 /* CustomGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGroupViewController.swift; sourceTree = "<group>"; };
+		900FDAAF26FDD0A7005A3678 /* CustomGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGroupCollectionViewCell.swift; sourceTree = "<group>"; };
 		90E1155826F8AC2B009AB02C /* CompositionalLayoutsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CompositionalLayoutsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E1155B26F8AC2C009AB02C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90E1155D26F8AC2C009AB02C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +102,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		900FDAAC26FDD037005A3678 /* CustomGroup */ = {
+			isa = PBXGroup;
+			children = (
+				900FDAAD26FDD084005A3678 /* CustomGroupViewController.swift */,
+				900FDAAF26FDD0A7005A3678 /* CustomGroupCollectionViewCell.swift */,
+			);
+			path = CustomGroup;
+			sourceTree = "<group>";
+		};
 		90E1154F26F8AC2B009AB02C = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +140,7 @@
 				90E1155F26F8AC2C009AB02C /* SampleListViewController.swift */,
 				90E1158D26FD93D0009AB02C /* StandardLayouts */,
 				90E1159726FDA6C3009AB02C /* CarouselWithHeader */,
+				900FDAAC26FDD037005A3678 /* CustomGroup */,
 				90E1156426F8AC2C009AB02C /* Assets.xcassets */,
 				90E1156626F8AC2C009AB02C /* LaunchScreen.storyboard */,
 				90E1156926F8AC2C009AB02C /* Info.plist */,
@@ -303,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E1159B26FDB0F4009AB02C /* CarouselWithHeaderCollectionViewCell.swift in Sources */,
+				900FDAAE26FDD084005A3678 /* CustomGroupViewController.swift in Sources */,
 				900FDAAB26FDC1E0005A3678 /* UICollectionView+Extension.swift in Sources */,
 				90E1156026F8AC2C009AB02C /* SampleListViewController.swift in Sources */,
 				90E1158F26FD9872009AB02C /* StandardLayoutsSectionHeaderView.swift in Sources */,
@@ -313,6 +328,7 @@
 				90E1159126FD9890009AB02C /* StandardLayoutsSectionBackgroundDecorationView.swift in Sources */,
 				90E1159D26FDB104009AB02C /* CarouselWithHeaderSectionHeaderView.swift in Sources */,
 				90E1155E26F8AC2C009AB02C /* SceneDelegate.swift in Sources */,
+				900FDAB026FDD0A7005A3678 /* CustomGroupCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

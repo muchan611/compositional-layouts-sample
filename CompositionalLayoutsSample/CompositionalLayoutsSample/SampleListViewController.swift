@@ -12,6 +12,7 @@ class SampleListViewController: UIViewController {
     enum Section: Int, CaseIterable {
         case standard
         case carouselWithHeader
+        case customGroup
     }
     private let tableView = UITableView(frame: .zero)
     
@@ -43,6 +44,10 @@ extension SampleListViewController: UITableViewDelegate {
             let viewController = CarouselWithHeaderListViewController()
             viewController.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(viewController, animated: true)
+        case .customGroup:
+            let viewController = CustomGroupViewController()
+            viewController.hidesBottomBarWhenPushed = true
+            navigationController?.pushViewController(viewController, animated: true)
         }
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -68,6 +73,8 @@ extension SampleListViewController: UITableViewDataSource {
             cell.textLabel?.text = "StandardLayoutsViewController"
         case .carouselWithHeader:
             cell.textLabel?.text = "CarouselWithHeaderListViewController"
+        case .customGroup:
+            cell.textLabel?.text = "CustomGroupViewController"
         }
         return cell
     }

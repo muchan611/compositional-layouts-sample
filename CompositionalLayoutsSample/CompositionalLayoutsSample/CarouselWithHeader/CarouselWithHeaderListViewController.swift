@@ -23,7 +23,7 @@ class CarouselWithHeaderListViewController: UIViewController {
         
         title = "CarouselWithHeaderViewController"
         
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
         collectionView.backgroundColor = .white
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
