@@ -18,6 +18,9 @@
 		90E1158F26FD9872009AB02C /* StandardLayoutsSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1158E26FD9872009AB02C /* StandardLayoutsSectionHeaderView.swift */; };
 		90E1159126FD9890009AB02C /* StandardLayoutsSectionBackgroundDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1159026FD9890009AB02C /* StandardLayoutsSectionBackgroundDecorationView.swift */; };
 		90E1159326FD98BF009AB02C /* StandardLayoutsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1159226FD98BF009AB02C /* StandardLayoutsCollectionViewCell.swift */; };
+		90E1159926FDA6F1009AB02C /* CarouselWithHeaderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1159826FDA6F1009AB02C /* CarouselWithHeaderListViewController.swift */; };
+		90E1159B26FDB0F4009AB02C /* CarouselWithHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1159A26FDB0F4009AB02C /* CarouselWithHeaderCollectionViewCell.swift */; };
+		90E1159D26FDB104009AB02C /* CarouselWithHeaderSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1159C26FDB104009AB02C /* CarouselWithHeaderSectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		90E1158E26FD9872009AB02C /* StandardLayoutsSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLayoutsSectionHeaderView.swift; sourceTree = "<group>"; };
 		90E1159026FD9890009AB02C /* StandardLayoutsSectionBackgroundDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLayoutsSectionBackgroundDecorationView.swift; sourceTree = "<group>"; };
 		90E1159226FD98BF009AB02C /* StandardLayoutsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLayoutsCollectionViewCell.swift; sourceTree = "<group>"; };
+		90E1159826FDA6F1009AB02C /* CarouselWithHeaderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselWithHeaderListViewController.swift; sourceTree = "<group>"; };
+		90E1159A26FDB0F4009AB02C /* CarouselWithHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselWithHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		90E1159C26FDB104009AB02C /* CarouselWithHeaderSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselWithHeaderSectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 				90E1155D26F8AC2C009AB02C /* SceneDelegate.swift */,
 				90E1155F26F8AC2C009AB02C /* SampleListViewController.swift */,
 				90E1158D26FD93D0009AB02C /* StandardLayouts */,
+				90E1159726FDA6C3009AB02C /* CarouselWithHeader */,
 				90E1156426F8AC2C009AB02C /* Assets.xcassets */,
 				90E1156626F8AC2C009AB02C /* LaunchScreen.storyboard */,
 				90E1156926F8AC2C009AB02C /* Info.plist */,
@@ -143,6 +150,16 @@
 				90E1159226FD98BF009AB02C /* StandardLayoutsCollectionViewCell.swift */,
 			);
 			path = StandardLayouts;
+			sourceTree = "<group>";
+		};
+		90E1159726FDA6C3009AB02C /* CarouselWithHeader */ = {
+			isa = PBXGroup;
+			children = (
+				90E1159826FDA6F1009AB02C /* CarouselWithHeaderListViewController.swift */,
+				90E1159A26FDB0F4009AB02C /* CarouselWithHeaderCollectionViewCell.swift */,
+				90E1159C26FDB104009AB02C /* CarouselWithHeaderSectionHeaderView.swift */,
+			);
+			path = CarouselWithHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,12 +291,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E1159B26FDB0F4009AB02C /* CarouselWithHeaderCollectionViewCell.swift in Sources */,
 				90E1156026F8AC2C009AB02C /* SampleListViewController.swift in Sources */,
 				90E1158F26FD9872009AB02C /* StandardLayoutsSectionHeaderView.swift in Sources */,
 				90E1155C26F8AC2C009AB02C /* AppDelegate.swift in Sources */,
+				90E1159926FDA6F1009AB02C /* CarouselWithHeaderListViewController.swift in Sources */,
 				90E1158C26FD9382009AB02C /* StandardLayoutsViewController.swift in Sources */,
 				90E1159326FD98BF009AB02C /* StandardLayoutsCollectionViewCell.swift in Sources */,
 				90E1159126FD9890009AB02C /* StandardLayoutsSectionBackgroundDecorationView.swift in Sources */,
+				90E1159D26FDB104009AB02C /* CarouselWithHeaderSectionHeaderView.swift in Sources */,
 				90E1155E26F8AC2C009AB02C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

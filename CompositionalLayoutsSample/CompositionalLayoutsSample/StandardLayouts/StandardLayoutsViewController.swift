@@ -18,15 +18,7 @@ class StandardLayoutsViewController: UIViewController {
     }
     private var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
     private var collectionView: UICollectionView! = nil
-    
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -116,7 +108,6 @@ class StandardLayoutsViewController: UIViewController {
                 return section
             }
         }
-        layout.register(StandardLayoutsSectionHeaderView.self, forDecorationViewOfKind: StandardLayoutsSectionHeaderView.elementKind)
         layout.register(StandardLayoutsSectionBackgroundDecorationView.self, forDecorationViewOfKind: StandardLayoutsSectionBackgroundDecorationView.elementKind)
         return layout
     }

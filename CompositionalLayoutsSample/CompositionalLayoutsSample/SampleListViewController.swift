@@ -11,7 +11,7 @@ import UIKit
 class SampleListViewController: UIViewController {
     enum Section: Int, CaseIterable {
         case standard
-        case partTwo
+        case carouselWithHeader
     }
     private let tableView = UITableView(frame: .zero)
     
@@ -39,8 +39,8 @@ extension SampleListViewController: UITableViewDelegate {
         case .standard:
             let viewController = StandardLayoutsViewController()
             navigationController?.pushViewController(viewController, animated: true)
-        case .partTwo:
-            let viewController = UIViewController()
+        case .carouselWithHeader:
+            let viewController = CarouselWithHeaderListViewController()
             viewController.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(viewController, animated: true)
         }
@@ -66,8 +66,8 @@ extension SampleListViewController: UITableViewDataSource {
         switch section {
         case .standard:
             cell.textLabel?.text = "StandardLayoutsViewController"
-        case .partTwo:
-            cell.textLabel?.text = "PartTwoViewController"
+        case .carouselWithHeader:
+            cell.textLabel?.text = "CarouselWithHeaderListViewController"
         }
         return cell
     }
