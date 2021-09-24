@@ -10,7 +10,7 @@ import UIKit
 
 class SampleListViewController: UIViewController {
     enum Section: Int, CaseIterable {
-        case partOne
+        case standard
         case partTwo
     }
     private let tableView = UITableView(frame: .zero)
@@ -36,8 +36,8 @@ extension SampleListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let section = Section(rawValue: indexPath.section) else { return }
         switch section {
-        case .partOne:
-            let viewController = UIViewController()
+        case .standard:
+            let viewController = StandardLayoutsViewController()
             navigationController?.pushViewController(viewController, animated: true)
         case .partTwo:
             let viewController = UIViewController()
@@ -64,8 +64,8 @@ extension SampleListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.accessoryType = .disclosureIndicator
         switch section {
-        case .partOne:
-            cell.textLabel?.text = "PartOneViewController"
+        case .standard:
+            cell.textLabel?.text = "StandardLayoutsViewController"
         case .partTwo:
             cell.textLabel?.text = "PartTwoViewController"
         }

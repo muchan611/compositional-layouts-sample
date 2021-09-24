@@ -14,6 +14,10 @@
 		90E1156826F8AC2C009AB02C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90E1156626F8AC2C009AB02C /* LaunchScreen.storyboard */; };
 		90E1157326F8AC2D009AB02C /* CompositionalLayoutsSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1157226F8AC2D009AB02C /* CompositionalLayoutsSampleTests.swift */; };
 		90E1157E26F8AC2D009AB02C /* CompositionalLayoutsSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1157D26F8AC2D009AB02C /* CompositionalLayoutsSampleUITests.swift */; };
+		90E1158C26FD9382009AB02C /* StandardLayoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1158B26FD9382009AB02C /* StandardLayoutsViewController.swift */; };
+		90E1158F26FD9872009AB02C /* StandardLayoutsSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1158E26FD9872009AB02C /* StandardLayoutsSectionHeaderView.swift */; };
+		90E1159126FD9890009AB02C /* StandardLayoutsSectionBackgroundDecorationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1159026FD9890009AB02C /* StandardLayoutsSectionBackgroundDecorationView.swift */; };
+		90E1159326FD98BF009AB02C /* StandardLayoutsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1159226FD98BF009AB02C /* StandardLayoutsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		90E1157926F8AC2D009AB02C /* CompositionalLayoutsSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompositionalLayoutsSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90E1157D26F8AC2D009AB02C /* CompositionalLayoutsSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutsSampleUITests.swift; sourceTree = "<group>"; };
 		90E1157F26F8AC2D009AB02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90E1158B26FD9382009AB02C /* StandardLayoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLayoutsViewController.swift; sourceTree = "<group>"; };
+		90E1158E26FD9872009AB02C /* StandardLayoutsSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLayoutsSectionHeaderView.swift; sourceTree = "<group>"; };
+		90E1159026FD9890009AB02C /* StandardLayoutsSectionBackgroundDecorationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLayoutsSectionBackgroundDecorationView.swift; sourceTree = "<group>"; };
+		90E1159226FD98BF009AB02C /* StandardLayoutsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardLayoutsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,7 @@
 				90E1155B26F8AC2C009AB02C /* AppDelegate.swift */,
 				90E1155D26F8AC2C009AB02C /* SceneDelegate.swift */,
 				90E1155F26F8AC2C009AB02C /* SampleListViewController.swift */,
+				90E1158D26FD93D0009AB02C /* StandardLayouts */,
 				90E1156426F8AC2C009AB02C /* Assets.xcassets */,
 				90E1156626F8AC2C009AB02C /* LaunchScreen.storyboard */,
 				90E1156926F8AC2C009AB02C /* Info.plist */,
@@ -123,6 +132,17 @@
 				90E1157F26F8AC2D009AB02C /* Info.plist */,
 			);
 			path = CompositionalLayoutsSampleUITests;
+			sourceTree = "<group>";
+		};
+		90E1158D26FD93D0009AB02C /* StandardLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				90E1158B26FD9382009AB02C /* StandardLayoutsViewController.swift */,
+				90E1158E26FD9872009AB02C /* StandardLayoutsSectionHeaderView.swift */,
+				90E1159026FD9890009AB02C /* StandardLayoutsSectionBackgroundDecorationView.swift */,
+				90E1159226FD98BF009AB02C /* StandardLayoutsCollectionViewCell.swift */,
+			);
+			path = StandardLayouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				90E1156026F8AC2C009AB02C /* SampleListViewController.swift in Sources */,
+				90E1158F26FD9872009AB02C /* StandardLayoutsSectionHeaderView.swift in Sources */,
 				90E1155C26F8AC2C009AB02C /* AppDelegate.swift in Sources */,
+				90E1158C26FD9382009AB02C /* StandardLayoutsViewController.swift in Sources */,
+				90E1159326FD98BF009AB02C /* StandardLayoutsCollectionViewCell.swift in Sources */,
+				90E1159126FD9890009AB02C /* StandardLayoutsSectionBackgroundDecorationView.swift in Sources */,
 				90E1155E26F8AC2C009AB02C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
