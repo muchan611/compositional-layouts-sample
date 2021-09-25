@@ -36,13 +36,12 @@ class CustomGroupViewController: UIViewController {
     }
     
     private func createLayout() -> UICollectionViewLayout {
-        let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, environment) -> NSCollectionLayoutSection? in
-            guard let self = self else { return nil }
+        let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
             let sideHorizontalMargin: CGFloat = 16
             let midHorizontalMargin: CGFloat = 12
             let midVerticalMargin: CGFloat = 12
 
-            let cellWidth = (self.collectionView.bounds.width - sideHorizontalMargin * 2 - midHorizontalMargin) / 2
+            let cellWidth = (environment.container.contentSize.width - sideHorizontalMargin * 2 - midHorizontalMargin) / 2
 
             let shorterCellHeight = cellWidth
             let tallerCellHeight = shorterCellHeight * 1.2

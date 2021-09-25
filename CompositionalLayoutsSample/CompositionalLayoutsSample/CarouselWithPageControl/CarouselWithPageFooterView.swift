@@ -14,8 +14,8 @@ class CarouselWithPageFooterView: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(pageControl)
-        pageControl.currentPageIndicatorTintColor = .blue
-        pageControl.pageIndicatorTintColor = .cyan
+        pageControl.currentPageIndicatorTintColor = UIColor(red: 160/255, green: 131/255, blue: 131/255, alpha: 1.0)
+        pageControl.pageIndicatorTintColor =  UIColor(red: 214/255, green: 205/255, blue: 190/255, alpha: 1.0)
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             pageControl.leadingAnchor.constraint(equalTo: leadingAnchor),
